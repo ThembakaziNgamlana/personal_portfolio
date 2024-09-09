@@ -2,10 +2,9 @@ import React from 'react';
 import './About.css';
 import profile_img from '../../assets/profile_img.png';
 
-
 const About = () => {
   return (
-    <div className='about'>
+    <div id="about" className='about'>
       <div className='about-title'>
         <h1>About me</h1>
       </div>
@@ -16,7 +15,7 @@ const About = () => {
         <div className='about-right'>
           <div className='about-para'>
             <p>I am a passionate and dedicated Full Stack Developer. My journey into the world of web development has been fueled by a strong desire to build innovative and user-friendly applications that solve real-world problems.</p>
-            <p> As a learner, I am committed to mastering both front-end and back-end technologies. I have been actively involved in projects that require proficiency in HTML, CSS, Java, AngularJs,  and databases like  PostgreSQL. My learnership has provided me with hands-on experience, allowing me to apply theoretical knowledge in a practical environment.</p>
+            <p> As a learner, I am committed to mastering both front-end and back-end technologies...</p>
           </div>
           <div className='about-skills'>
             <div className='about-skill'><p>HTML</p><hr style={{width:"50%"}} /></div>
@@ -27,10 +26,9 @@ const About = () => {
           </div>
         </div>
       </div>
-
-     
     </div>
   );
 };
 
 export default About;
+
