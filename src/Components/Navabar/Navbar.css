@@ -29,3 +29,7 @@
     transform: scale(1.05);
 
 }
+
+.contact {
+    padding-top: 70px; /* Adjust based on the height of your navbar */
+  }
