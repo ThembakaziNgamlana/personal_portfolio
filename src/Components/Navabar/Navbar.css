@@ -1,35 +1,89 @@
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 170px;
-    
-}
-.navbar img{
-    height: 200px;
-    width: 200px;
-}
-.nav-menu{
-   display: flex;
-   align-items: center;
-   list-style: none;
-   gap: 60px;
-   font-size: 20px;
+    padding: 20px 30px;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
 }
 
-.nav-connect{
-    padding: 20px 40px;
-    border-radius: 50px;
+.navbar-logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000; /* Change to desired color */
+}
+
+.nav-menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.nav-connect {
+    padding: 10px 20px;
+    border-radius: 25px;
     background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 10.96%);
-    font-size: 22px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.5s;
+    display: none;
 }
-.nav-connect:hover{
+
+.nav-connect a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-connect:hover {
     transform: scale(1.05);
-
 }
 
-.contact {
-    padding-top: 70px; /* Adjust based on the height of your navbar */
-  }
+@media (max-width: 768px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: #fff;
+        width: 250px;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        transition: max-height 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        gap: 10px;
+    }
+
+    .nav-menu-open {
+        max-height: 400px; /* Adjust based on your menu size */
+    }
+
+    .nav-menu-toggle {
+        display: block;
+    }
+
+    .nav-connect {
+        display: block;
+        margin-top: 20px;
+    }
+}

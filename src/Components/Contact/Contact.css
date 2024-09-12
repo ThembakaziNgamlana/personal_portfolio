@@ -3,20 +3,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
+    gap: 40px; /* Reduced gap for better mobile layout */
+    padding: 20px; /* Added padding */
+    margin: 0 auto; /* Center the section */
+    max-width: 1200px; /* Limit the max width */
 }
 
 .contact-title {
+    text-align: center; /* Center-align title */
     position: relative;
 }
 
 .contact-title h1 {
-    padding: 0px 30px;
-    font-size: 80px;
+    padding: 0 20px;
+    font-size: 2.5rem; /* Adjusted font size for better responsiveness */
     font-weight: 600;
-    text-align: center;
-    padding-bottom: 70px;
+    padding-bottom: 20px;
 }
 
 .contact-title img {
@@ -28,23 +30,25 @@
 
 .contact-section {
     display: flex;
-    gap: 150px;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    gap: 40px;
+    width: 100%;
 }
 
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px; /* Reduced gap for mobile */
     color: #D8D8D8;
-    font-size: 22px;
-    padding-left: 50px;
+    font-size: 1rem; /* Adjusted font size for better readability */
+    padding-left: 0; /* Removed left padding for small screens */
 }
 
 .contact-detail {
     display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 15px;
+    flex-direction: column; /* Stack label and detail vertically on small screens */
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .contact-detail p {
@@ -53,19 +57,20 @@
 }
 
 .contact-detail img {
-    width: 30px;  /* Adjust the size of the icon */
-    height: 30px; /* Keep the image square */
+    width: 24px; /* Adjusted icon size for responsiveness */
+    height: 24px;
     object-fit: contain;
 }
 
 .contact-left {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
+    text-align: center; /* Center-align text for mobile */
 }
 
 .contact-left h1 {
-    font-size: 80px;
+    font-size: 2.5rem; /* Adjusted font size for better readability */
     font-weight: 700;
     background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 106.28%);
     background-clip: text;
@@ -74,46 +79,36 @@
 }
 
 .contact-left p {
-    max-width: 550px;
+    max-width: 100%; /* Ensure text fits container */
     color: #D8D8D8;
-    font-size: 20px;
-    line-height: 50px;
+    font-size: 1rem; /* Adjusted font size for better readability */
+    line-height: 1.6;
 }
 
 .contact-right {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 30px;
+    align-items: stretch; /* Ensure form elements stretch to container width */
+    gap: 20px;
 }
 
 .contact-right label {
     color: #D8D8D8;
-    font-size: 22px;
+    font-size: 1rem; /* Adjusted font size for better readability */
     font-weight: 500;
 }
 
-.contact-right input {
-    border: none;
-    width: 700px;
-    height: 78px;
-    padding-left: 20px;
-    border-radius: 4px;
-    background: #323232;
-    color: #A0A0A0;
-    font-family: Outfit;
-    font-size: 20px;
-}
-
+.contact-right input,
 .contact-right textarea {
-    width: 650px;
     border: none;
-    padding: 25px;
+    width: 100%; /* Ensure form elements are full-width */
+    max-width: 600px; /* Limit max width for larger screens */
+    padding: 15px;
     border-radius: 4px;
     background: #323232;
     color: #A0A0A0;
-    font-family: Outfit;
-    font-size: 20px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem; /* Adjusted font size for better readability */
 }
 
 .contact-submit {
@@ -121,14 +116,45 @@
     color: white;
     border-radius: 50px;
     background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 106.28%);
-    font-size: 22px;
-    padding: 20px 60px;
-    margin-bottom: 50px;
+    font-size: 1rem; /* Adjusted font size for better readability */
+    padding: 15px 30px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .contact-submit:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.3s;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .contact-section {
+        flex-direction: row; /* Display elements side by side on larger screens */
+        gap: 80px;
+    }
+
+    .contact-details {
+        font-size: 1.2rem; /* Adjust font size for larger screens */
+    }
+    
+    .contact-left {
+        text-align: left; /* Align text to the left */
+    }
+}
+
+@media (min-width: 900px) {
+    .contact-title h1 {
+        font-size: 3rem; /* Larger font size for larger screens */
+    }
+
+    .contact-right input,
+    .contact-right textarea {
+        font-size: 1.2rem; /* Adjust font size for larger screens */
+    }
+
+    .contact-submit {
+        font-size: 1.2rem; /* Adjust font size for larger screens */
+        padding: 15px 40px;
+    }
 }

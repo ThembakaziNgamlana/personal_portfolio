@@ -10,15 +10,9 @@ const Footer = () => {
           <div className="footer-top-left">
            <img  src="{footer_logo}"  alt=""  />
           <h2>Thembakazi Ngamlana</h2>
-           <p>I am a passionate and dedicated Full Stack Developer. My journey into the world of web development has been fueled by a strong desire to build innovative and user-friendly applications that solve real-world problems.</p>
+          <p>Thanks for visiting my portfolio! I’m always eager to connect with fellow developers and industry professionals. If you have any questions or just want to chat about tech, feel free to reach out.</p>
           </div>
-          <div className="footer-top-right">
-             <div className="footer-email-input">
-                <img src="{user_icon}"  alt=""      />
-                <input type="text"    placeholder="Enter your email"  />
-             </div>
-             <div className="footer-subscribe">Subcribe</div>
-          </div>
+         
        </div>
        <hr />
        <div  className="footer-bottom">

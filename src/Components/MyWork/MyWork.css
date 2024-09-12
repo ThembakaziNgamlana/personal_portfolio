@@ -1,74 +1,95 @@
+.mywork {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
 .about-achivements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 80px;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  text-align: center;
+}
 
+.about-achivements h2 {
+  font-size: 1.5rem; /* Adjusted font size for responsiveness */
+  font-weight: 700;
+  background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 106.28%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-.about-achivements h2{
-    font-size:  30px;
-    font-weight: 700;
-    background: linear-gradient( 270deg, #DF8908 50.41%, #B415FF 106.28%) ;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
- }
- .project-item img {
-  width: 200px; /* Set a fixed width */
-  height: 200px; /* Set a fixed height */
-  background-color: white; /* Set the background color to white */
-  object-fit: cover; /* Ensures the image covers the area without stretching */
-  border: 1px solid #ddd; /* Optional: Add a subtle border */
-  padding: 10px; /* Optional: Add padding inside the image container */
+.project-item img {
+  width: 280px ;
+  height: 300px; 
+  background-color: white;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  padding: 10px;
   margin-top: 20px;
 }
 
- .about-achivements p{
-    font-size: 22px;
-    font-weight: 500;
-  }
-  
-  .about-achivement {
-    margin-bottom: 40px;
-  }
-  
-  .about-achivement h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-
-  
-  
-  .about-achivement p {
-    margin-top: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-  }
-  
-
-  .projects-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    width: 100%;
-    max-width: 1200px;
-  }
-
-.project-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-  
-
-  .project-item img {
-    max-width: 200px; /* Adjust the percentage as needed */
-    height:200px;
-    margin-top: 20px;
-  
+.about-achivements p {
+  font-size: 1.2rem; /* Adjusted font size for better readability */
+  font-weight: 500;
 }
 
+.about-achivement {
+  margin-bottom: 40px;
+}
+
+.about-achivement h1 {
+  font-size: 2rem; /* Adjusted font size for responsiveness */
+  margin-bottom: 20px;
+}
+
+.about-achivement p {
+  margin-top: 20px;
+  font-size: 1rem; /* Adjusted font size for better readability */
+  line-height: 1.6;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column by default */
+  gap: 20px; /* Reduced gap for smaller screens */
+  width: 100%;
+  max-width: 1000px; /* Adjusted max-width */
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .projects-grid {
+      grid-template-columns: 1fr 1fr; /* Two columns for tablets and larger screens */
+      gap: 30px;
+  }
+
+  .about-achivement h1 {
+      font-size: 2.5rem; /* Larger font size for larger screens */
+  }
+}
+
+@media (min-width: 900px) {
+  .projects-grid {
+      grid-template-columns: 1fr 1fr 1fr; /* Three columns for desktops and larger screens */
+      gap: 40px;
+  }
+
+  .about-achivement h1 {
+      font-size: 3rem; /* Larger font size for larger screens */
+  }
+
+  .project-item img {
+      width: 100%; /* Ensure images scale appropriately */
+  }
+}

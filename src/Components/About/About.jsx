@@ -18,11 +18,12 @@ const About = () => {
             <p> As a learner, I am committed to mastering both front-end and back-end technologies...</p>
           </div>
           <div className='about-skills'>
-            <div className='about-skill'><p>HTML</p><hr style={{width:"50%"}} /></div>
-            <div className='about-skill'><p>CSS</p><hr style={{width:"50%"}} /></div>
-            <div className='about-skill'><p>Javascript</p><hr style={{width:"60%"}} /></div>
-            <div className='about-skill'><p>Java(Spring-Boot)</p><hr style={{width:"30%"}} /></div>
-            <div className='about-skill'><p>Progress Sql</p><hr style={{width:"60%"}} /></div>
+            <div className='about-skill'><p>HTML</p><hr style={{width:"50%"}} />50%</div>
+            <div className='about-skill'><p>CSS</p><hr style={{width:"50%"}} />50%</div>
+            <div className='about-skill'><p>Javascript</p><hr style={{width:"60%"}} />60%</div>
+            <div className='about-skill'><p>AngulaJs</p><hr style={{width:"40%"}} />40%</div>
+            <div className='about-skill'><p>Java(Spring-Boot)</p><hr style={{width:"30%"}} />30%</div>
+            <div className='about-skill'><p>Progress Sql</p><hr style={{width:"60%"}} />60%</div>
           </div>
         </div>
       </div>
